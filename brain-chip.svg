@@ -1,0 +1,39 @@
+<!-- filepath: c:\Users\Pc\OneDrive - KASI CONNECT KC\Documents\GitHub\Nzima-admin-AI\my-web-app\src\brain-chip.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="chip-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9F1C"/>
+      <stop offset="100%" stop-color="#E08E1A"/>
+    </linearGradient>
+  </defs>
+  <!-- Brain outline -->
+  <path d="M50 20
+           Q35 20 35 35
+           Q20 35 20 50
+           Q20 65 35 65
+           Q35 80 50 80
+           Q65 80 65 65
+           Q80 65 80 50
+           Q80 35 65 35
+           Q65 20 50 20Z"
+        fill="none" stroke="url(#chip-gradient)" stroke-width="4"/>
+  <!-- Chip lines -->
+  <rect x="44" y="44" width="12" height="12" fill="url(#chip-gradient)" rx="2"/>
+  <line x1="50" y1="44" x2="50" y2="34" stroke="#FF9F1C" stroke-width="2"/>
+  <line x1="56" y1="44" x2="56" y2="34" stroke="#FF9F1C" stroke-width="2"/>
+  <line x1="44" y1="50" x2="34" y2="50" stroke="#FF9F1C" stroke-width="2"/>
+  <line x1="44" y1="56" x2="34" y2="56" stroke="#FF9F1C" stroke-width="2"/>
+  <line x1="62" y1="50" x2="72" y2="50" stroke="#FF9F1C" stroke-width="2"/>
+  <line x1="62" y1="56" x2="72" y2="56" stroke="#FF9F1C" stroke-width="2"/>
+  <line x1="50" y1="62" x2="50" y2="72" stroke="#FF9F1C" stroke-width="2"/>
+  <line x1="56" y1="62" x2="56" y2="72" stroke="#FF9F1C" stroke-width="2"/>
+  <!-- Chip dots -->
+  <circle cx="34" cy="50" r="2" fill="#FF9F1C"/>
+  <circle cx="34" cy="56" r="2" fill="#FF9F1C"/>
+  <circle cx="72" cy="50" r="2" fill="#FF9F1C"/>
+  <circle cx="72" cy="56" r="2" fill="#FF9F1C"/>
+  <circle cx="50" cy="34" r="2" fill="#FF9F1C"/>
+  <circle cx="56" cy="34" r="2" fill="#FF9F1C"/>
+  <circle cx="50" cy="72" r="2" fill="#FF9F1C"/>
+  <circle cx="56" cy="72" r="2" fill="#FF9F1C"/>
+</svg>

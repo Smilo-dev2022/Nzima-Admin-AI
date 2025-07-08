@@ -1,0 +1,28 @@
+{
+  "name": "nzima-admin-ai",
+  "version": "1.0.0",
+  "description": "Nzima-Admin-AI is a multi-platform admin and business management solution for African SMEs, powered by AI, with support for web, mobile, and backend integrations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.2.0",
+    "axios": "^1.10.0",
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.1",
+    "notistack": "^3.0.2",
+    "react-router-dom": "^7.6.3",
+    "recharts": "^3.0.2"
+  }
+}
