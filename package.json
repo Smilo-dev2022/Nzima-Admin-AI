@@ -4,7 +4,11 @@
   "description": "Nzima-Admin-AI is a multi-platform admin and business management solution for African SMEs, powered by AI, with support for web, mobile, and backend integrations.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend:start": "npm --prefix backend start",
+    "backend:dev": "npm --prefix backend run dev",
+    "docker:up": "docker compose up --build -d",
+    "docker:down": "docker compose down"
   },
   "keywords": [],
   "author": "",
