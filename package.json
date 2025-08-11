@@ -8,7 +8,8 @@
     "backend:start": "npm --prefix backend start",
     "backend:dev": "npm --prefix backend run dev",
     "docker:up": "docker compose up --build -d",
-    "docker:down": "docker compose down"
+    "docker:down": "docker compose down",
+    "scan:secrets": "git grep -nE '(sk-[A-Za-z0-9_-]{10,}|sk-proj-[A-Za-z0-9_-]{10,})' || echo 'No obvious secrets found'"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Block commits that contain likely secrets
+
+changed=$(git diff --cached --name-only)
+if [ -z "$changed" ]; then
+  exit 0
+fi
+
+# Scan staged content for common secret patterns
+if git diff --cached | grep -E "(OPENAI_API_KEY\s*=|sk-[A-Za-z0-9_-]{10,}|sk-proj-[A-Za-z0-9_-]{10,})" -q; then
+  echo "\n[pre-commit] Potential secret detected in staged changes. Commit aborted." >&2
+  echo "Remove secrets from code and use .env or CI secrets." >&2
+  exit 1
+fi
+
+exit 0
