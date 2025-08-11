@@ -144,3 +144,52 @@ This project is licensed under the MIT License.
 - **Mobile Document Generator:** [`/mobile/src/screens/DocumentGenerator.js`](mobile/src/screens/DocumentGenerator.js)
 - **AI Service Example:** [`/shared/services/ai.js`](shared/services/ai.js)
 - **Payment Integration Example:** [`/mobile/src/services/payment.js`](mobile/src/services/payment.js)
+
+---
+
+## Quickstart (Backend Only for now)
+
+- Install and run locally:
+  ```sh
+  cd backend
+  npm install
+  npm run dev # or: npm start
+  # Health check
+  curl -s http://localhost:5000/health | jq
+  ```
+
+- Run with Docker:
+  ```sh
+  docker compose up --build -d
+  curl -s http://localhost:5000/health | jq
+  ```
+
+- Environment variables to configure later:
+  - `OPENAI_API_KEY`
+  - `PAYFAST_MERCHANT_ID`, `PAYFAST_MERCHANT_KEY`
+  - Firebase service account in `firebase/serviceAccountKey.json`
+
+---
+
+## Quickstart (Web + Backend)
+
+- Local dev:
+  ```sh
+  # Backend
+  cp backend/.env.example backend/.env
+  # set OPENAI_API_KEY in backend/.env (do not commit)
+  npm run backend:dev
+  # Web
+  cd web
+  cp .env.example .env
+  npm install
+  npm run dev
+  # visit http://localhost:5173
+  ```
+
+- Docker Compose:
+  ```sh
+  # Ensure backend/.env contains OPENAI_API_KEY
+  npm run docker:up
+  # Web at http://localhost:8080, Backend at http://localhost:5000
+  ```
