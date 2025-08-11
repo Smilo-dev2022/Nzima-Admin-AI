@@ -25,7 +25,7 @@ app.use(helmet({
 app.use(express.json({ limit: '1mb' }));
 
 // CORS hardening
-const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:3000').split(',').map(o => o.trim());
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:3000,http://localhost:5173').split(',').map(o => o.trim());
 app.use(cors({
   origin: function(origin, callback) {
     if (!origin) return callback(null, true);
