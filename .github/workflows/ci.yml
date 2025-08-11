@@ -25,7 +25,7 @@ jobs:
           sleep 2
       - name: Health check
         run: |
-          curl -sf http://localhost:5000/health | jq
+          curl -sf http://localhost:5000/health
       - name: Stop server
         if: always()
         run: |

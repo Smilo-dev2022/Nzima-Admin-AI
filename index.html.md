@@ -1,5 +1,5 @@
 # Nzima-Admin-AI
-mermaid
+```mermaid
 graph TD
     A[Web - React.js] --> B[Backend - Node.js/Express]
     C[Mobile - React Native] --> B
