@@ -53,6 +53,60 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', service: 'nzima-admin-ai-backend' });
 });
 
+// Pricing plans (static for now)
+const PLANS = [
+  {
+    id: 'starter',
+    name: 'Starter',
+    price: 149,
+    currency: 'ZAR',
+    interval: 'monthly',
+    perUser: true,
+    usersIncluded: 1,
+    features: [
+      'Core dashboards',
+      'Document generator',
+      'Email support'
+    ],
+    highlight: 'Best for individuals'
+  },
+  {
+    id: 'pro',
+    name: 'Pro',
+    price: 299,
+    currency: 'ZAR',
+    interval: 'monthly',
+    perUser: false,
+    usersIncluded: 5,
+    features: [
+      'Everything in Starter',
+      'Team collaboration',
+      'Priority support'
+    ],
+    highlight: 'Teams up to 5 users'
+  },
+  {
+    id: 'enterprise',
+    name: 'Enterprise',
+    price: 599,
+    currency: 'ZAR',
+    interval: 'monthly',
+    perUser: false,
+    usersIncluded: 20,
+    features: [
+      'Everything in Pro',
+      'Advanced compliance',
+      'Dedicated success manager'
+    ],
+    highlight: 'Organizations up to 20 users'
+  }
+];
+
+// Public endpoint to fetch pricing plans
+app.get('/api/plans', (req, res) => {
+  res.json({ plans: PLANS });
+});
+
 // OpenAI client (lazy init)
 function createOpenAIClient() {
   const apiKey = process.env.OPENAI_API_KEY;

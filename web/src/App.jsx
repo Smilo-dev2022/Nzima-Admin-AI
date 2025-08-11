@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import { SnackbarProvider } from 'notistack'
 import DocumentGenerator from './components/DocumentGenerator'
+import Pricing from './components/Pricing'
 
 export default function App() {
   return (
@@ -18,6 +19,9 @@ export default function App() {
           </Typography>
         </Box>
         <DocumentGenerator />
+        <Box sx={{ mt: 8 }}>
+          <Pricing />
+        </Box>
       </Container>
     </SnackbarProvider>
   )
