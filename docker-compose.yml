@@ -5,6 +5,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: nzima-admin-ai-backend
+    env_file:
+      - backend/.env
     environment:
       - NODE_ENV=production
       - PORT=5000
